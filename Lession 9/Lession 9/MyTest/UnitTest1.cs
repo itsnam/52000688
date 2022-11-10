@@ -92,5 +92,11 @@ namespace MyTest
             Assert.IsFalse(status);
 
         }
+        [TestMethod]
+        [ExpectedException(typeof(SystemException))]
+        public void ScoreGreaterThan10()
+        {
+            Student s = new Student() { Id = 1, Name = "Toan", Age = 20, Score = 11 };
+        }
     }
 }
